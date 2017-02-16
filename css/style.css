@@ -1,0 +1,43 @@
+p{
+  color: black;
+  line-height: normal;
+}
+
+h1{
+  margin: 0;
+
+}
+
+body h5{
+  color: black;
+}
+
+.main{
+  padding: 60px 0;
+}
+#brand-logo{
+  padding-left:10px;
+}
+
+.jummbotron{
+  background-image: url('../img/pizzaHero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  background-color: #fff;
+}
+
+.jumboBackground{
+  width: 100%;
+  background-color: rgba(72, 11, 11, 0.3);
+  height: 500px;
+}
+/*.material-icons{
+  display: inline;
+}*/
+.wrapper{
+  text-align: center;
+}
+.btn{
+  margin-top: 20px;
+}
