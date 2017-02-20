@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Order Now</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
@@ -17,7 +17,11 @@
       <nav>
         <div class="nav-wrapper  red darken-4">
           <a href="index.html" class="brand-logo">Galvanize Delivers</a>
-          <ul class = "right">
+          <a href="#" data-activates="mobile-dropdown" class="button-collapse right"><i class="material-icons">menu</i></a>
+          <ul class = "right hide-on-med-and-down">
+            <li><a href="order.html">Order Delivery</a></li>
+          </ul>
+          <ul class="side-nav right"  id="mobile-dropdown" >
             <li><a href="order.html">Order Delivery</a></li>
           </ul>
         </div>
@@ -25,16 +29,17 @@
     </header>
     <div class="container">
       <div class="row">
-        <div class="col l7 menu">
+        <div class="col l7  m7  menu">
           <h3>Menu</h3>
           <div class="row">
-            <div class="col l6 m12">
+            <div class="col l6 m12 s12">
               <div class="card">
                 <div class="card-image">
                   <img src="img/burger.jpg" alt="">
                 </div>
-                <span class="card-title">Royale with Cheese</span>
+
                 <div class="card-content">
+                  <span class="card-title">Royale with Cheese</span>
                   <p class="price">$8.99</p>
                 </div>
                 <div class="card-action">
@@ -42,13 +47,14 @@
                 </div>
               </div>
             </div>
-            <div class="col l6 m12">
+            <div class="col l6 m12 s12">
               <div class="card">
                 <div class="card-image">
                   <img src="img/pizza.jpg" alt="">
                 </div>
-                <span class="card-title">Arugula Pie</span>
+
                 <div class="card-content">
+                  <span class="card-title">Arugula Pie</span>
                   <p class="price">$11.99</p>
                 </div>
                 <div class="card-action">
@@ -56,13 +62,14 @@
                 </div>
               </div>
             </div>
-            <div class="col l6 m12">
+            <div class="col l6 m12 s12">
               <div class="card">
                 <div class="card-image">
                   <img src="img/ribs.jpg" alt="">
                 </div>
-                <span class="card-title">Smoked Swine</span>
+
                 <div class="card-content">
+                  <span class="card-title">Smoked Swine</span>
                   <p class="price">$14.99</p>
                 </div>
                 <div class="card-action">
@@ -70,13 +77,14 @@
                 </div>
               </div>
             </div>
-            <div class="col l6 m12">
+            <div class="col l6 m12 s12">
               <div class="card">
                 <div class="card-image">
                   <img src="img/ice_cream.jpg" alt="">
                 </div>
-                <span class="card-title">Ice Cream Biscuit</span>
+
                 <div class="card-content">
+                  <span class="card-title">Ice Cream Biscuit</span>
                   <p class="price">$7.99</p>
                 </div>
                 <div class="card-action">
@@ -86,7 +94,7 @@
             </div>
           </div>
         </div>
-        <div class="col l5 cart">
+        <div class="col l5  m5 s12 cart">
           <h3>Order</h3>
           <table class="striped reciept">
             <thead>
@@ -97,7 +105,7 @@
             </tbody>
           </table>
           <div class="row">
-            <div class="col l8 offset-l6">
+            <div class="col l8 offset-l6 s8 offset-s6">
               <table>
                 <tbody>
                   <tr>
@@ -122,27 +130,27 @@
                 <div class="row">
                   <div class="input-field ">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
+                    <input id="icon_prefix" type="text" class="validate name" required>
                     <label class="active" for="first_name2">First Name</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field ">
                     <i class="material-icons prefix">phone</i>
-                    <input id="icon_prefix" type="text" class="validate">
+                    <input id="icon_prefix" type="text" class="validate phone" required>
                     <label class="active" for="first_name2">Phone Number</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field ">
                     <i class="material-icons prefix">location_city</i>
-                    <textarea name="name" class="materialize-textarea"rows="8" cols="80"></textarea>
+                    <input id="icon_prefix" type="text" class="validate address"rows="8" cols="80" required></textarea>
                     <label class="active" for="first_name2">Address</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col l12 center">
-                    <button type="button" name="button" class="btn yellow darken-2">Order Now</button>
+                    <button type="submit" name="submit" class="btn yellow darken-2">Order Now</button>
                   </div>
                 </div>
               </form>
@@ -168,7 +176,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          copyright
+          copyright © Galvanize Delivers
         </div>
       </div>
     </footer>

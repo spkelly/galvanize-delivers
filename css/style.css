@@ -1,43 +1,97 @@
-p{
-  color: black;
-  line-height: normal;
+.main div div p {
+    color: black;
+    font-size: 18px;
+    line-height: 20px;
 }
 
-h1{
-  margin: 0;
+h1 {
+    margin: 0;
+}
+
+button a{
+  color:#fff;
+}
+
+body h5 {
+    color: black;
+}
+
+.main {
+    padding: 60px 0;
+}
+
+#brand-logo {
+    padding-left: 10px;
+}
+
+.jummbotron {
+    background-image: url('../img/pizzaHero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    background-color: #fff;
+}
+
+.jumboBackground {
+    width: 100%;
+    background-color: rgba(72, 11, 11, 0.3);
+    height: 500px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+/* changing default form color */
+/* label color */
+
+.input-field label {
+    color: #000;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: #000;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+
+.input-field .prefix.active {
+    color: #000;
+}
+
+.input-field textarea.materialize-textarea {
+
+  color: #000;
 
 }
 
-body h5{
-  color: black;
+/*colors the label directly following the text area*/
+.input-field textarea.materialize-textarea:focus+label{
+  color: #000;
 }
 
-.main{
-  padding: 60px 0;
-}
-#brand-logo{
-  padding-left:10px;
+/* Colors the text area when in focus */
+
+.input-field textarea.materialize-textarea:focus{
+  color: #000;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
 }
 
-.jummbotron{
-  background-image: url('../img/pizzaHero.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  background-color: #fff;
-}
-
-.jumboBackground{
-  width: 100%;
-  background-color: rgba(72, 11, 11, 0.3);
-  height: 500px;
-}
-/*.material-icons{
-  display: inline;
-}*/
-.wrapper{
-  text-align: center;
-}
-.btn{
-  margin-top: 20px;
+.side-nav{
+  edge:right;
 }

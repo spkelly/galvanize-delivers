@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Galvanize Delivers</title>
-    <!-- Compiled and minified CSS -->
     <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/materialize.css">
+    <script type="text/javascript" src=./js/materialize.js></script>
     <link rel="stylesheet" href="css/style.css">
+
+
+    <script type="text/javascript" src="./js/script.js" ></script>
   </head>
   <body class="orange lighten-5">
     <nav>
       <div class="nav-wrapper  red darken-4">
-        <a href="#" class="brand-logo">Galvanize Delivers</a>
-        <ul class = "right">
+        <a href="index.html" class="brand-logo">Galvanize Delivers</a>
+        <a href="#" data-activates="mobile-dropdown" class="button-collapse right"><i class="material-icons">menu</i></a>
+        <ul class = "right hide-on-med-and-down">
+          <li><a href="order.html">Order Delivery</a></li>
+        </ul>
+        <ul class="side-nav right"  id="mobile-dropdown" >
           <li><a href="order.html">Order Delivery</a></li>
         </ul>
       </div>
@@ -28,23 +33,23 @@
       <div class="jumboBackground valign-wrapper">
         <div class="container wrapper">
           <h1 class="valign center-align">Fine Dining, Delivered</h1>
-          <button type="button" name="button" class="center-align btn yellow darken-2">Click Here</button>
+          <button type="button" name="button" class="center-align btn yellow darken-2"><a href="order.html">Click Here</a></button>
         </div>
       </div>
       <!-- <img src="img/hero.jpg" alt=""> -->
     </div>
     <div class="container main">
       <div class="row">
-        <div class="col m4">
-          <h5 class="pink-text"><i id="test" class="small material-icons">shopping_basket</i>Shop Online</h5>
+        <div class="col m4 l4 s12">
+          <h5 class="red-text"><i id="test" class="small material-icons">shopping_basket</i>Shop Online</h5>
           <p class="text">Using our convenient web app, you'll get all the power of gFood without having to call your order in. Order in your pajamas, order 24 hours a day, order on Christmas, we're here to serve you.</p>
         </div>
-        <div class="col m4 ">
-          <h5 class="pink-text"><i class="material-icons">shopping_cart</i>Fast Delivery</h5>
+        <div class="col m4 l4 s12">
+          <h5 class="red-text"><i class="material-icons">shopping_cart</i>Fast Delivery</h5>
           <p class="text">You've never seen ordering this quick. Our proprietary ordering rocket ship delivery team allows you to spend less time being hungry, and more time doing what matters most to you. We'd ask what that is, but gFood respects your privacy.</p>
         </div>
-        <div class="col m4 ">
-          <h5 class="pink-text"> <i class="material-icons">credit_card</i> Great Deals</h5>
+        <div class="col m4 l4 s12">
+          <h5 class="red-text"> <i class="material-icons">credit_card</i> Great Deals</h5>
           <p class="text">Money: You've got it, we want it. But let it never be said we're not incredibly fair! Burger sales? Check. Pizza sales? Check. Burger and pizza sales?? Check, check, check! We seriously can't stop making deals</p>
         </div>
       </div>
@@ -58,15 +63,15 @@
           </div>
           <div class="col l2  offset-l2 s12">
             <ul>
-              <li class="white-text"><a href="#">Home</a></li>
-              <li><a href="#">Order Delivery</a></li>
+              <li ><a class="white-text" href="index.html">Home</a></li>
+              <li ><a class="white-text" href="order.html">Order Delivery</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-          copyright
+          copyright © Galvanize Delivers
         </div>
 
       </div>
