@@ -1,26 +1,18 @@
 $(document).ready(function() {
+  // Functions
+
+  // adds up reciept and calculates tax
   var calcTotal = function(totalElement, subTotalElement, taxElement, price) {
     'use strict';
 
     const taxRate = 0.08995;
 
-    // console.log("taxRate: ", taxRate);
-
     let totalValue = parseFloat(totalElement.text());
     let subTotalValue = parseFloat(subTotalElement.text());
     let taxTotal = parseFloat(taxElement.text());
-
-    // console.log("priceNumber: ",priceNumber);
-
-    const priceNumber = parseFloat(price);
-    const taxValue = taxRate * priceNumber;
-
-    // console.log("taxValue: ",taxValue);
-
-    const tmpTotal = (priceNumber + taxValue);
-
-    // console.log("current total",tmpTotal)
-    // console.log("totalValue: ",totalValue);
+    let priceNumber = parseFloat(price);
+    let taxValue = taxRate * priceNumber;
+    let tmpTotal = (priceNumber + taxValue);
 
     totalValue += tmpTotal;
     taxTotal += taxValue;
@@ -29,13 +21,9 @@ $(document).ready(function() {
     totalElement.text(totalValue.toFixed(2));
     subTotalElement.text(subTotalValue.toFixed(2));
     taxElement.text(taxTotal.toFixed(2));
-
-    // get the current total value
-    // get the total value of all reciept
-    // add this value to the current total value
-    // set the total value element to the total value
   };
 
+  // validates form data
   var validate = function(formInputs) {
     for (var i = 0; i < formInputs.length; i++) {
       var text = $(formInputs[i]).val();
@@ -44,9 +32,11 @@ $(document).ready(function() {
         return false;
       }
     }
+
     return true;
   };
 
+  // resets all reciept data
   var resetOrder = function(recieptTable, recieptTotal, recieptSubtotal, recieptTax, inputs) {
     recieptTax.text('0.00');
     recieptSubtotal.text('0.00');
@@ -55,6 +45,7 @@ $(document).ready(function() {
     recieptTable.remove();
   };
 
+  // grabbing HTML Element
   const card = $('.card');
   const reciept = $($('tbody')[0]);
   const total = $('#total');
@@ -65,6 +56,7 @@ $(document).ready(function() {
   // adds side nave to the right side of the screen
   $('.button-collapse').sideNav({ edge: 'right' });
 
+  // Event Listeners
   card.on('click', '.food-order', function(e) {
     // prevents default button action
     e.preventDefault();
