@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   var calcTotal = function(totalElement, subTotalElement, taxElement, price) {
     'use strict';
 
@@ -40,6 +39,7 @@ $(document).ready(function() {
   var validate = function(formInputs) {
     for (var i = 0; i < formInputs.length; i++) {
       var text = $(formInputs[i]).val();
+
       if (!text) {
         return false;
       }
@@ -47,13 +47,13 @@ $(document).ready(function() {
     return true;
   };
 
-  var resetOrder = function(reciept, total, subTotal, tax, inputs) {
-    tax.text('0.00');
-    subTotal.text('0.00');
-    total.text('0.00');
+  var resetOrder = function(recieptTable, recieptTotal, recieptSubtotal, recieptTax, inputs) {
+    recieptTax.text('0.00');
+    recieptSubtotal.text('0.00');
+    recieptTotal.text('0.00');
     inputs.val('');
-    reciept.remove();
-  }
+    recieptTable.remove();
+  };
 
   const card = $('.card');
   const reciept = $($('tbody')[0]);
@@ -63,7 +63,7 @@ $(document).ready(function() {
   const submit = $('button[type="submit"]');
 
   // adds side nave to the right side of the screen
-  $(".button-collapse").sideNav({ edge: 'right' });
+  $('.button-collapse').sideNav({ edge: 'right' });
 
   card.on('click', '.food-order', function(e) {
     // prevents default button action
@@ -92,10 +92,10 @@ $(document).ready(function() {
     var formValidated = validate(inputs);
 
     if (!recieptItems.length) {
-      Materialize.toast('You have not ordered anything yet...' ,2000);
+      Materialize.toast('You have not ordered anything yet...', 6000);
     }
     else if (!formValidated) {
-      Materialize.toast('Please fill out all form fields', 2000);
+      Materialize.toast('Please fill out all form fields', 6000);
     }
     else {
       Materialize.toast('Thank You for your order!', 8000);
