@@ -20,9 +20,11 @@ body h5 {
     padding: 60px 0;
 }
 
-#brand-logo {
+.brand-logo {
     padding-left: 10px;
 }
+
+
 
 .jummbotron {
     background-image: url('../img/pizzaHero.jpg');
@@ -53,6 +55,13 @@ body h5 {
     color: #000;
 }
 
+.dark-red{
+    background-color: #801515 !important;
+}
+
+.dark-yellow{
+    background-color: #e6a709 !important;
+}
 
 /* label focus color */
 
@@ -94,4 +103,19 @@ body h5 {
 
 .side-nav{
   edge:right;
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    .logo{
+        padding-left: 20px !important;
+    }
+}
+    
+    /* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    .logo{
+        padding-left: 20px !important;
+    }
 }
